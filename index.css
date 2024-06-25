@@ -1,3 +1,118 @@
-h2 {
-  color: blue;
+.container-xl {
+  background-color: rgb(222, 231, 224);
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #152238;
+}
+
+#clock-container {
+  margin: auto;
+  display: block;
+  background-image: url("images/clock-edited-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  height: 100px;
+}
+
+#time {
+  padding-top: 33px;
+}
+
+.question {
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+#question {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #23395d;
+  margin: auto;
+}
+
+#instructions {
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+  color: #23395d;
+}
+
+#game-area {
+  display: none;
+  text-align: center;
+}
+
+#answerText {
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  background-color: white;
+  color: #23395d;
+  width: 60%;
+  font-size: 1.5em;
+}
+
+#submit {
+  margin: auto;
+  font-size: 1.3em;
+  background-color: #4682B4;
+  color: white;
+  font-weight: bold;
+}
+
+.padding {
+  padding-top: 20px;
+}
+
+#scorecard {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+#correct, #incorrect, #round, #highScore {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #152238;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  #answerText {
+    width: 40%;
+  }
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  #clock-container {
+    margin: auto;
+    display: block;
+    background-image: url("images/clock-edited-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+    height: 250px;
+  }
+  
+  #time {
+    font-size: 4.5em;
+    padding-top: 74px;
+  }
+
+  #scorecard {
+    padding-left: 50px;
+  }
 }
