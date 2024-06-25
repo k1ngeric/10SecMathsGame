@@ -1,26 +1,61 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>10 Sec Maths Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h2>10 Sec Maths Game</h2>
-          <h3 id="time-left">10</h3>
-          <p>second left</p>
-          <h1 id="equation"></h1>
-          <input id="user-input" type="number" />
-          <h4>Score: <span id="score"></span></h4>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- linked css file -->
+  <link rel="stylesheet" type="text/css" href="math.css">
+  <!-- jquery js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- linked js file -->
+  <script src="math.js"></script>
+  <title>Math Game</title>
+</head>
+<body>
+  <div class="container-xl">
+    <h1>10-second Math Game</h1>
+    <div id="clock-container">
+      <h1 id="time">10s</h1>
+    </div>
+    <audio src="sounds/chimeStart.mp3" id="chimeStart"></audio>
+    <audio src="sounds/clock.mp3" id="clock" loop></audio>
+    <audio src="sounds/chimeCorrect.mp3" id="chimeCorrect"></audio>
+    <audio src="sounds/chimeIncorrect.mp3" id="chimeIncorrect"></audio>
+    <audio src="sounds/buzzer.mp3" id="buzzer"></audio>
+    <div class="row question">
+      <button id="question">Start game</button>
+    </div>
+    <div id="instructions">
+      <p>Answer as many questions as you can before the timer runs out!</p>
+      <p>Get one extra second for each correct answer.</p>
+    </div>
+    <div id="game-area">
+      <form>  
+        <input type="text" autocomplete="off" value="" placeholder="" id="answerText" />
+      </form>
+      <div class="row padding">
+        <button class="btn" id="submit">Submit</button>
+      </div>
+      <div id="scorecard">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <p id="correct"></p>
+          </div>
+          <div class="col-6 col-md-3">
+            <p id="incorrect"></p>
+          </div>
+          <div class="col-6 col-md-3">
+            <p id="round"></p>
+          </div>
+          <div class="col-6 col-md-3">
+            <p id="highScore">|| High Score: 0</p>
+          </div>          
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
